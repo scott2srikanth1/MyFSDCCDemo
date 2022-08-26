@@ -4,8 +4,8 @@ node{
     }
     stage("Docker Build"){
 
-        sh 'docker build -t myfsdcc .'
-        sh 'docker tag myfsdcc scott2srikanth/myfsdcc:latest'
+        sh 'docker build -t myfsdcc_pipeline .'
+        sh 'docker tag myfsdcc_pipeline scott2srikanth/myfsdcc_pipeline:latest'
 
     }
 
@@ -14,6 +14,6 @@ node{
      }
 
     stage("Push image to Dockerhub"){
-        sh 'docker push scott2srikanth/myfsdcc:latest'
+        sh 'docker push scott2srikanth/myfsdcc_pipeline:latest'
     }
 }
