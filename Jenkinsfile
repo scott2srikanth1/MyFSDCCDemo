@@ -8,9 +8,9 @@ node{
         sh 'docker tag myfsdcc scott2srikanth/myfsdcc:latest'
 
     }
-    
+
      withCredentials([string(credentialsId: 'dockerhub', variable: 'password')]){
-         sh 'docker login -u scott2srikant -p $password'
+         sh 'docker login -u scott2srikanth -p $password'
      }
 
     stage("Push image to Dockerhub"){
