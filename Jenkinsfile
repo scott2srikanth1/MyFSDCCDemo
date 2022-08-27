@@ -16,4 +16,8 @@ node{
     stage("Push image to Dockerhub"){
         sh 'docker push scott2srikanth/myfsdcc_pipeline:latest'
     }
+
+     stage("Spin-up Kubernetes"){
+        sh 'kubectl apply -f mykube.yaml'
+    }
 }
